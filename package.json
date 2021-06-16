@@ -4,11 +4,16 @@
   "description": "appli freshdistrib",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "author": "Maxime Arbouille",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^13.1.2"
+    "electron": "^13.1.2",
+    "sqlite3": "^5.0.2"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0",
+    "sqlite3": "^5.0.2"
   }
 }

@@ -7,13 +7,25 @@ let mainWindow;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 1800, height: 1200});
+  mainWindow = new BrowserWindow({
+    width: 1800,
+    height: 1200,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
+  });
+
   mainWindow.webContents.openDevTools()
 
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
+  mainWindow.loadURL(`file://${__dirname}/buy/buy.html`);
 
   mainWindow.on('closed', () => {
     mainWindow = null;
+  })
+
+  mainWindow.on('show', () => {
+    console.log('test');
   })
 }
 
