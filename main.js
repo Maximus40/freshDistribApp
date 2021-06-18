@@ -23,12 +23,8 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null;
   })
-
-  mainWindow.on('show', () => {
-    console.log('test');
-  })
 }
-
+app.allowRendererProcessReuse = false
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
